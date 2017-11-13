@@ -1,5 +1,3 @@
-package TicTacToe;
-
 import java.awt.Color;
 import java.util.InputMismatchException;
 
