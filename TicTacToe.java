@@ -1,4 +1,3 @@
-package TicTacToe;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -165,6 +164,7 @@ public class TicTacToe {
 		}
 	}
 	
+	//Assign the value 1 to AI, 0 to user
 	public void coinToss() {
 		Random coin = new Random();
 		turnKeeper = coin.nextInt(2);
@@ -184,6 +184,8 @@ public class TicTacToe {
 		};
 	}
 	
+	//Checks first if there is a winning move for the AI
+	//Else finds a winning move to block for user
 	public boolean checkForObviousMove()
 	{
 		
@@ -344,7 +346,7 @@ public class TicTacToe {
 	
 	public void getAIMove()
 	{
-		//If there is no obvious, keep asking for input until a valid one is found
+		//If there is no obvious, make a random move as long as the spot isn't taken
 		if(!checkForObviousMove()) {
 			Random generateRandomNumber = new Random();
 			int x = generateRandomNumber.nextInt(board.length);
@@ -450,6 +452,7 @@ public class TicTacToe {
 		return ' ';
 	}
 	
+	//Score keeping, UI
 	public int endGame(char symbol) {
 		Object[] options = {"Cancel", "Restart"};
 		if(symbol == 'X') {
