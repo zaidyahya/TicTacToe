@@ -1,5 +1,3 @@
-package TicTacToe;
-
 import java.awt.EventQueue;
 
 public class Client {
